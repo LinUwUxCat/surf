@@ -3,7 +3,7 @@
 SURF is, as its name suggests, an unprecise pseudo-random function.
 ## How it works
 SURF uses the same "floating point bit level hacking" used in [Fast InvSqrt()](https://en.wikipedia.org/wiki/Fast_inverse_square_root#Overview_of_the_code), except with an int.
-Assuming `s` the "seed", given by the user (or using the default int value, depending on compilers), SURF works as the following:
+Assuming `seed` the "seed" given by the user (or using the default int value, depending on compilers), SURF works as the following:
 ```c
 int32_t surf(){
 	float f = seed; //cast int32_t to float automatically (e.g. 3 becomes 3.0)
