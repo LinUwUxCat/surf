@@ -16,7 +16,8 @@ int32_t surf(){
 }
 ```
 ## Problems
-While this may look like the float conversion will always give different results due to the "bit hacking", this is not always the case, as floats are actually not precise for big values and as such will round some of the values. as an example, 987654321 can not be stored as it is in a float and will become 987654336. in the event that the seed later is 987654322, 987654336 will also be stored in the float, thus giving the same result for 2 different values.
+While this may look like the float conversion will always give different results due to the "bit hacking", this is not always the case, as floats are actually not precise for big values and as such will round some of the values. as an example, 987654321 can not be stored as it is in a float and will become 987654336. in the event that the seed later is 987654322, 987654336 will also be stored in the float, thus giving the same result for 2 different values.\
+This is *kinda* fixed by the *=, but you still lose some precision, hence the name. (987654336 to int using the bit hack is 1315666339, and 987654321\*1315666339 is not the same as 987654322\*1315666339)\
 For more information, i recommend checking out [the wikipedia page on IEEE754](https://en.wikipedia.org/wiki/IEEE_754).
 ## dSURF (double SURF)
 dSURF works the same as regular SURF but with an int64_t and a double instead of an int32_t and a float. This gives more precision but takes up more space.
