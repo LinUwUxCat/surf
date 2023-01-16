@@ -1,3 +1,7 @@
+#include "surf.h"
+uint32_t __surf_seed;
+uint64_t __dsurf_seed;
+
 void surfsetseed(uint32_t seed){
 	__surf_seed=seed;
 }
