@@ -1,5 +1,3 @@
-#include "surf.h"
-
 void surfsetseed(uint32_t seed){
 	__surf_seed=seed;
 }
